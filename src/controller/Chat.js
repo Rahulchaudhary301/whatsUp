@@ -5,7 +5,7 @@ const MessageSchema=require('../model/MessageSchema')
 const grid=require('gridfs-stream')
 const mongoose=require('mongoose')
 
-const url="http://localhost:5000"
+const url="https://whatsup-6v48.onrender.com"
 
 let gfs , gridfsBucket;
 const conn=mongoose.connection;
@@ -149,7 +149,7 @@ const GetMessage= async(req,res)=>{
 
 
 const UploadFile= async(req,res)=>{
-const url='http://localhost:5000'
+const url='https://whatsup-6v48.onrender.com'
   try {
     if(!req.file){
       return res.status(404).send({status:true,msg:"File not found"})
